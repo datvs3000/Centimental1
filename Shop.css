@@ -1,0 +1,52 @@
+.container-fluid{
+            background-color: black;
+            padding: 0px;
+            text-align: center;
+        }
+        .cart-area{
+            float: right;
+            padding: 25px;
+            font-size: 16px;
+        }
+        .search-bar{
+            float: left;
+            padding: 25px;
+        }
+        .header_bottom{
+            padding: 25px;
+            font-size: 16px;
+        }
+        .le{
+            padding: 0 50px;
+        }
+        img{
+            max-width: 100%;
+        }
+        .row{
+            margin: 0 0 100px;
+            text-align: center;
+            margin: 30px;
+        }
+        .den{
+            background-color: #000;
+            color: #fff;
+            padding: 8px 10px;
+            border: transparent;
+            border-radius: 25px;
+        }
+        .kc{
+            padding: 10px;
+        }
+        .out-of-stock-label{
+            color: #333;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: absolute;
+            top: 32%;
+            left: 0;
+            right: 0;
+            padding: 20px 0;
+            background: rgba(255,255,255,.9);
+            text-align: center;
+            opacity: .9;
+        }

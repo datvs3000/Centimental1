@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centiemental Web online</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        :root{
+            --color1 : #FBBC01;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        header{
+            width: 100vw;
+            height: 100vh;
+            background: url(images/Phongnen.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        header::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            display: block;
+        }
+        header input{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            opacity: 0;
+            z-index: 2;
+            cursor: pointer;
+            position: fixed;
+        }
+        header input:checked  ~ .menu-icon .menu-line::before {
+            transform: rotate(90deg);
+            top: 0;
+        }
+        header input:checked  ~ .menu-icon .menu-line::after {
+            transform: rotate(90deg);
+            top: 0;
+        }
+        header input:checked  ~ .menu-icon .menu-line{
+            transform: rotate(135deg);
+            transition: 0.3s;
+        }
+        header input:checked ~ .menu-item{
+            right: 0;
+        }
+        .menu-icon{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            opacity: 1;
+            z-index: 1;
+            cursor: pointer;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: center;
+        }
+        .menu-line{
+            height: 4px;
+            width: 100%;
+            background: var(--color1);
+            position: relative;
+        }
+        .menu-line::before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            background: var(--color1);
+            top: -14px;
+        }
+        .menu-line::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            background: var(--color1);
+            top: 14px;
+        }
+        .menu-item{
+            position: fixed;
+            width: 300px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            top: 0;
+            right: -100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            z-index: 10;
+            flex-direction: column;
+            transition: 0.5s;
+        }
+        .menu-item li{
+            line-height: 40px;
+        }
+        .menu-item li a{
+            color:  var(--color1);
+        }
+        .header-text{
+            position: absolute;
+        }
+        .header-text h1{
+            font-size: 90px;
+            color: #fff;
+        }
+        .header-text h3{
+            font-size: 50px;
+            color: #fff;
+            padding: 25px;
+        }
+        .header-text a{
+            padding: 20px 40px;
+            background: var(--color1);
+            color: #000;
+            border-radius: 50px;
+            font-size: 25px;
+            opacity: 0.3;
+            animation: headerAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: 0.3s;
+        }
+        .header-text a:hover {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #666!important;
+        }
+        @keyframes  headerAnimation {
+            0% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <input type="checkbox">
+        <div class="menu-icon">
+            <div class="menu-line">
+
+            </div>
+        </div>
+        <div class="menu-item">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="D:\CentimentalWeb_DoAn\Shop.html">Shop</a></li>
+            <li><a href="#">Cart / 0 VND</a></li>
+        </div>
+        <div class="header-text">
+            <img src="images/logo-white.jpg (1).png">
+            <h1>>>GIVEAWAY<<</h1>
+            <h1>>>ALERT<<</h1>
+            <h3 style="text-align: center;">_________________________ </h3>
+            <a href="D:\CentimentalWeb_DoAn\Shop.html" style="text-decoration: none; font-size: 22px; color: honeydew;"><b>EXPLORE</b></a>
+        </div>
+    </header>
+</body>
+</html>

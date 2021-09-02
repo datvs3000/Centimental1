@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CentimentalWeb</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .container-fluid{
+            background-color: black;
+            padding: 0px;
+            text-align: center;
+        }
+        .cart-area{
+            float: right;
+            padding: 25px;
+            font-size: 16px;
+        }
+        .search-bar{
+            float: left;
+            padding: 25px;
+        }
+        .header_bottom{
+            padding: 25px;
+            font-size: 16px;
+        }
+        .le{
+            padding: 0 50px;
+        }
+        img{
+            max-width: 100%;
+        }
+        .row{
+            margin: 0 0 100px;
+            text-align: center;
+            margin: 30px;
+        }
+        .den{
+            background-color: #000;
+            color: #fff;
+            padding: 8px 10px;
+            border: transparent;
+            border-radius: 25px;
+        }
+        .kc{
+            padding: 10px;
+        }
+        .out-of-stock-label{
+            color: #333;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: absolute;
+            top: 32%;
+            left: 0;
+            right: 0;
+            padding: 20px 0;
+            background: rgba(255,255,255,.9);
+            text-align: center;
+            opacity: .9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="search-bar">
+                    <form action="#">
+                        <input placeholder="Search..." type="text">
+                        <button type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Logo">
+                    <a href="file:///D:/CentimentalWeb_DoAn/TrangChu.html">
+                        <img src="images/logo-white.jpg (1).png" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart-area">
+                    <div class="cart-link">
+                        <a href="#" style="color: white; text-decoration: none">Card / 0 VNĐ
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom sticky-header">
+        <div class="container">
+            <div class="rows">
+                <div class="col-md-8">
+                    <div class="breadcrumb_content">
+                        <a href="file:///D:/CentimentalWeb_DoAn/TrangChu.html" style="text-decoration: none">HOME</a>
+                        <span class="nguxi">/</span>
+                        SHOP
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <p class="adu" style="color: gray; font-size: 16px;">Showing all 14 results</p>
+                </div>
+                <div class="col-md-2">
+                    <form action="#">
+                        <div class="select-box">
+                            <select id="select-box1" class="select" style="width: 174px; height: 35px; box-shadow: 3px;">
+                                <option value="popularity">Sort by popularity</option>
+                                <option value="rating">Sort by average rating</option>
+                                <option value="date" selected="selected">Sort by latest</option>
+                                <option value="price">Sort by price: low to high</option>
+                                <option value="price-desc">Sort by price: high to low</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <main id="main">
+        <div class="row le">
+            <div class="col-md-4">
+                <a href="D:\CentimentalWeb_DoAn\MentalHoodies.html" style="text-decoration: none; color: black;">
+                    <img src="images/Logo-hoodies.jpg">
+                    <p>Logo Hoodies</p>
+                    <h5><b>650,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/MentalHoodies.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/LogoHoodies.html" style="text-decoration: none; color: black;">
+                    <img src="images/Mental Hoodies.jpg">
+                    <p>Mental Hoodies</p>
+                    <h5><b>790,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/LogoHoodies.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/JacketEyes.html" style="text-decoration: none; color: black;">
+                    <img src="images/Eyes of Terror Jacket.jpg">
+                    <p>Eyes of Terror Jacket</p>
+                    <h5><b>690,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/JacketEyes.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+            </div>
+        </div>
+        <div class="row le">
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/ReversibleToteBag.html" style="text-decoration: none; color: black;">
+                    <img src="images/Reversible Tote Bag.jpg">
+                    <p>Reversible Tote Bag</p>
+                    <h5><b>390,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/ReversibleToteBag.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">ADD TO CARD</a>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/EyesofTerrorTee.html" style="text-decoration: none; color: black;">
+                    <img src="images/Eyes of Terror Tee.jpg">
+                    <p>Eyes of Terror Tee</p>
+                    <h5><b>420,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/EyesofTerrorTee.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+                </a>
+                <div class="out-of-stock-label" style="right: 15px;">Out of stock</div>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/KissTheDeathTee.html" style="text-decoration: none; color: black;">
+                    <img src="images/Kiss The Death Tee.jpg">
+                    <p>Kiss The Death Tee</p>
+                    <h5><b>420,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/KissTheDeathTee.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+                </a>
+            </div>
+        </div>
+        <div class="row le">
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/Reconstructed%20Crewneck.html" style="text-decoration: none; color: black;">
+                    <img src="images/Crewneck.jpg">
+                    <p>Reconstructed Crewneck</p>
+                    <h5><b>790,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/Reconstructed%20Crewneck.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/Pins%20&%20Stickers.html" style="text-decoration: none; color: black;">
+                    <img src="images/Pins & Stickers.jpg">
+                    <p>Pins & Stickers</p>
+                    <h5><b>60,000 VND – 120,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/Pins%20&%20Stickers.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/Logo%20Socks.html" style="text-decoration: none; color: black;">
+                    <img src="images/Logo Socks.jpg">
+                    <p>Logo Socks</p>
+                    <h5><b>90,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/Logo%20Socks.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">READ MORE</a>
+                </a>
+            </div>
+        </div>
+        <div class="row le">
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/Pouch.html" style="text-decoration: none; color: black;">
+                    <img src="images/Pouch.jpg">
+                    <p>Pouch</p>
+                    <h5><b>230,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/Pouch.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">ADD TO CART</a>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/Oversized%20Tee.html" style="text-decoration: none; color: black;">
+                    <img src="images/Oversized Tee.jpg">
+                    <p>Oversized Tee</p>
+                    <h5><b>420,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/Oversized%20Tee.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+                </a>
+                <div class="out-of-stock-label" style="right: 20px;">Out of stock</div>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/Oversized%20Crewneck.html" style="text-decoration: none; color: black;">
+                    <img src="images/Oversized Crewneck.jpg">
+                    <p>Oversized Crewneck</p>
+                    <h5><b>740,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/Oversized%20Crewneck.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">ADD TO CARD</a>   
+                </a>
+                <div class="out-of-stock-label" style="right: 20px;">Out of stock</div>
+            </div>
+        </div>
+        <div class="row le">
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/Oversized%20Crewneck%20(Limited).html" style="text-decoration: none; color: black;">
+                    <img src="images/Crewneck(limited).jpg">
+                    <p>Oversized Crewneck (Limited)</p>
+                    <h5><b>940,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/Oversized%20Crewneck%20(Limited).html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+                </a>
+                <div class="out-of-stock-label" style="right: 15px;">Out of stock</div>
+            </div>
+            <div class="col-md-4">
+                <a href="file:///D:/CentimentalWeb_DoAn/Heaven%20and%20Hell%20Hoodie.html" style="text-decoration: none; color: black;">
+                    <img src="images/Heaven and Hell Hoodie.jpeg">
+                    <p>Heaven and Hell Hoodie</p>
+                    <h5><b>690,000 VND</b></h5>
+                    <a class="den" href="file:///D:/CentimentalWeb_DoAn/Heaven%20and%20Hell%20Hoodie.html" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">READ MORE</a>
+                </a>
+                <div class="out-of-stock-label" style="right: 15px;">Out of stock</div>
+            </div>
+        </div>
+</body>
+</html>
