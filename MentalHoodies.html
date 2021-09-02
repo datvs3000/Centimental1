@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centimental</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            font-weight: 400;
+        }
+        .container-fluid{
+            background-color: black;
+            padding: 0px;
+            text-align: center;
+        }
+        .cart-area{
+            float: right;
+            padding: 25px;
+            font-size: 16px;
+        }
+        .search-bar{
+            float: left;
+            padding: 25px;
+        }
+        .header_bottom{
+            padding: 25px;
+            font-size: 16px;
+        }
+        .row{
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+        .le{
+            padding: 0 40px;
+        }
+        img{
+            max-width: 100%;
+        }
+        .xam{
+            color: gray;
+        }
+        .ngu{
+            border-radius: 25px;
+        }
+        .dandon{
+            border-radius: 15px;
+            background: #212529;
+            color: #fff;
+            padding: 7px 45px;
+            display: inline-block;
+            margin-top: 20px;
+            border: solid 2px #212529;
+            transition: all 0.5s ease-in-out 0s;
+        }
+        .dandon :hover,
+        .dandon :focus{
+            background: transparent;
+            color: #212529;
+            text-decoration: none;
+        }
+        .den{
+            background-color: #000;
+            color: #fff;
+            padding: 8px 10px;
+            border: transparent;
+            border-radius: 25px;
+        }
+        .kc{
+            padding: 10px;
+        }
+        .product-count {
+            margin-top: 15px;
+        }
+        .product-dtl label {
+            line-height: 16px;
+            font-size: 15px;
+        }
+        .product-count .qtyminus, .product-count .qtyplus {
+            width: 34px;
+            height: 34px;
+            background: #212529;
+            text-align: center;
+            font-size: 19px;
+            line-height: 36px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .product-count .qty {
+            width: 60px;
+            text-align: center;
+        }
+        .product-count .qtyplus {
+            border-radius: 0 3px 3px 0;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
+        label {
+            cursor: default;
+        }
+        button, input {
+            overflow: visible;
+        }
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+        .display-flex {
+            display: flex;
+            margin-left: 170px;
+        }
+        .product-info-tabs {
+             margin-top: 25px; 
+        }
+        .product-info-tabs .nav-tabs {
+            border-bottom: 2px solid #d8d8d8;
+        }
+        .product-info-tabs .nav-tabs .nav-item {
+            margin-bottom: 0;
+        }
+        .product-info-tabs .nav-tabs .nav-link {
+            border: none; 
+            border-bottom: 2px solid transparent;
+            color: #323232;
+        }
+        .product-info-tabs .nav-tabs .nav-item .nav-link:hover {
+            border: none; 
+        }
+        .product-info-tabs .nav-tabs .nav-item.show .nav-link, 
+        .product-info-tabs .nav-tabs .nav-link.active, 
+        .product-info-tabs .nav-tabs .nav-link.active:hover {
+            border: none; 
+            border-bottom: 2px solid #d8d8d8;
+            font-weight: bold;
+        }
+        .product-info-tabs .tab-content .tab-pane {
+            padding: 3px 20px;
+            font-size: 15px;
+            line-height: 24px;
+            color: #7a7a7a;
+        }
+        .review-form .form-group {
+            clear: both;
+        }
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        .review-form .rate {
+            float: none;
+            display: inline-block;
+        }
+        .review-heading {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 24px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            color: #000;
+        }
+        .review-form .form-control {
+            font-size: 14px;
+        }
+        .review-form input.form-control {
+            height: 40px;
+        }
+        .review-form textarea.form-control {
+            resize: none;
+        }
+        .review-form .round-black-btn {
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .review-counter{
+            font-size: 13px;
+        }
+        .rate{
+            float: left;
+            padding: 0px 10px 0 0;
+        }
+        .rate:not(:checked) > input {
+            position: absolute;
+            top: -9999px;
+        }
+        input[type=checkbox], input[type=radio] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        .rate:not(:checked) > label {
+            float: right;
+            width: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 21px;
+            color: #ccc;
+            margin-bottom: 0;
+            line-height: 21px;
+        }
+        button, input {
+            overflow: visible;
+        }
+        button, input, optgroup, select, textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+        .out-of-stock-label{
+            color: #333;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: absolute;
+            top: 32%;
+            left: 0;
+            right: 0;
+            padding: 20px 0;
+            background: rgba(255,255,255,.9);
+            text-align: center;
+            opacity: .9;
+        }
+        .noidung img{display:block;transition: all .3s ease;}
+        .noidung img:hover{transform: scale(1.5);}
+        .noidung p{display:block;overflow: hidden;}
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="search-bar">
+                    <form action="#">
+                        <input placeholder="Search..." type="text">
+                        <button type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Logo">
+                    <a href="file:///D:/CentimentalWeb_DoAn/TrangChu.html">
+                        <img src="images/logo-white.jpg (1).png" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart-area">
+                    <div class="cart-link">
+                        <a href="#" style="color: white; text-decoration: none">Card / 0 VNĐ
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row le">
+            <div class="col-md-6">
+                <div class="noidung">
+                    <a href="#">
+                        <p><img src="hoodiesMental/1.jpg"></p>
+                        <p><img src="hoodiesMental/2.jpg"></p>
+                        <p><img src="hoodiesMental/3.jpg" style="padding: 25px;"></p>
+                        <p><img src="hoodiesMental/4.jpg" style="padding: 25px;"></p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding: 25px; margin-top: 25px; font-size: 16px;">
+                <a href="file:///D:/CentimentalWeb_DoAn/TrangChu.html" style="color: gray; text-decoration: none;">HOME /</a>
+                <a href="file:///D:/CentimentalWeb_DoAn/Shop.html" style="color: gray; text-decoration: none;">CLOTHING / HOODIES</a>
+                <h3 class="cuto" style="color: gray;"><b>Logo Hoodies</b></h3>
+                <h4>650,000 VND</h4>
+                <p class="xam">Details</p>
+                <p class="xam">Oversized Boxy Fit  – Black</p>
+                <p class="xam">Material: French Terry, 100% cotton</p>
+                <p class="xam">Embroidered “CENTIMENTAL” on the front</p>
+                <p class="xam">Available in two sizes: 1 and 2.</p>
+                    <tbody>
+                        <tr>
+                            <td class="label">
+                                <label for="pa_size" style="font-size: 15px;">Size</label>
+                            </td>
+                            <td class="label">
+                                <select id="pa_size" class="attribute_pa_size" style="border-radius: 25px; padding: 8px; background-color: rgb(235, 232, 232); border: 10px;">
+                                    <option value>Choose an option</option>
+                                    <option value="1" class="attached enabled">1</option>
+                                    <option value="2" class="attached enabled">2</option>
+                                </select>
+                                <a class="reset_variations" href="#" style="visibility: hidden;">Clear</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <div class="product-count">
+                        <label for="size">Quantity</label>
+                        <form action="#" class="display-flex">
+                            <div class="qtyminus">-</div>
+                            <input type="text" name="quantity" value="1" class="qty">
+                            <div class="qtyplus">+</div>
+                        </form>
+                        <a href="#" class="dandon" style="text-decoration: none;">Add to cart</a>
+                    </div>
+            </div>
+
+    </div>
+    <div class="product-info-tabs">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">ADDITIONAL INFORMATION</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews (0)</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab"> 
+                SIZE	                                           1,2
+            </div>
+            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                <div class="review-heading">REVIEWS</div>
+                <p class="mb-20">There are no reviews yet.</p>
+                <form class="review-form">
+                    <div class="form-group">
+                        <label>Your rating</label>
+                        <div class="reviews-counter">
+                    <div class="rate">
+                        <img src="Images/star.png" style="width: 81px;">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Your message</label>
+                <textarea class="form-control" rows="10"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="" class="form-control" placeholder="Name*">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="" class="form-control" placeholder="Email Id*">
+                    </div>
+                </div>
+            </div>
+            <button class="dandon">Submit Review</button>
+        </form>
+    </div>
+    <div class="row">
+        <h3 class="batman" style="margin-left: -781px; height: 40px;">RELATED PRODUCTS</h3>
+        <div class="col-md-4">
+            <a href="#" style="text-decoration: none; color: black;">
+                <img src="images/Heaven and Hell Hoodie.jpeg">
+                <p>Heaven and Hell Hoodie</p>
+                <h5><b>690,000 VND</b></h5>
+                <a class="den" href="#" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">READ MORE</a>
+            </a>
+            <div class="out-of-stock-label" style="right: 15px;">Out of stock</div>
+        </div>
+        <div class="col-md-4">
+            <a href="#" style="text-decoration: none; color: black;">
+                <img src="images/Logo-hoodies.jpg">
+                <p>Logo Hoodies</p>
+                <h5><b>650,000 VND</b></h5>
+                <a class="den" href="#" style="text-decoration: none; background-color:rgb(150, 137, 137); color: white;">SELECT OPTIONS</a>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
